@@ -1,8 +1,17 @@
 <html>
 <head></head>
 <body>
+
+    <div th:if="${param.error}">
+    ${param.error}
+      Invalid username and password. ${param.error}
+    </div>
+    <div th:if="${param.logout}">
+      You have been logged out. ${param.logout}
+    </div>
+
    <h1>Login</h1>
-   <form name='f' action="login" method='POST'>
+   <form name='f' action="/login" method='POST'>
       <table>
          <tr>
             <td>User:</td>
